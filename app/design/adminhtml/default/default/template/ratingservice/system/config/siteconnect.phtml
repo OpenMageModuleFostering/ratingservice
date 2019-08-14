@@ -1,0 +1,42 @@
+<?php
+$sitesData = $this->getSiteConnect();
+?>
+
+<select name="<?php echo $this->getNamePrefix() ?>" id="site-connect">
+<?php foreach ($sitesData as $siteObject):?>
+  <option value="<?php echo $siteObject->getId();?>" <?php echo ($siteObject->getId() == $this->getSelectedValue()?"selected" : "") ?>><?php echo $siteObject->getSite();?></option>
+<?php endforeach;?>
+</select>
+
+<br><Br>
+<div>
+  <button type="button" onclick="javascript:uploadSiteList();">
+      <span><span><span><?php echo Mage::helper('ratingservice')->__('Update List') ?></span></span></span>
+  </button>
+</div>
+
+<script type="text/javascript">
+    function uploadSiteList() {
+        new Ajax.Request('<?php echo $this->getAjaxSiteListUrl() ?>', {
+            method:     'get',
+            onSuccess: function(transport){
+
+              if (transport.responseText){
+                var sitesData = transport.responseText.split("%;%");
+                var siteOptions = "";
+                var siteSelected = $('site-connect')[$('site-connect').selectedIndex].text;
+
+                for (var i = 0; i < sitesData.length; i++) {
+                  var siteObject = sitesData[i].split("%-%");
+                  if(siteObject[1] == siteSelected){
+                    siteOptions += '<option value="'+siteObject[0]+'" selected>'+siteObject[1]+'</option>';
+                  }else{
+                    siteOptions += '<option value="'+siteObject[0]+'">'+siteObject[1]+'</option>';
+                  }
+                }
+                $('site-connect').update(siteOptions);
+              }
+            }
+        });
+    }
+</script>

@@ -1,0 +1,34 @@
+<style>
+.block_notices {
+    display: block;
+    border: 1px solid #D6D6D6 !important;
+    background: none repeat scroll 0 0 #FAFAFA !important;
+    padding: 10px 15px !important;
+    margin-bottom: 15px !important;
+    font-weight: 900;
+
+}
+
+.activated{
+    color: #3d8000;
+}
+
+.deactive{
+    color: red;
+}
+.info{
+  color:#3375AD;
+}
+</style>
+
+<div class="block_notices">
+  <?php if(Mage::getStoreConfig('rating_service/general/enable', Mage::app()->getStore()) == 1){ ?>
+    <?php if(Mage::getStoreConfig('rating_service/general/company_active', Mage::app()->getStore()) == 1){ ?>
+      <div class="activated"><?php echo Mage::helper('ratingservice')->__('Your company has been activated!') ?></div>
+    <?php } else if(Mage::getStoreConfig('rating_service/general/company_id', Mage::app()->getStore()) == null){?>
+      <div class="info">Please connect your store by adding your url path at <a href="<?php echo $this->getSiteUrl()?>"><?php echo $this->getSiteUrl()?></a>. Url path is everything after the / at <a href="<?php echo $this->getSiteUrl()?>"><?php echo $this->getSiteUrl()?></a>. For example if your company url is www.kundtjanster.com/hidroxa-kundtjanst then you write hidroxa-kundtjanst in the company id field.</div>
+    <?php } else {?>
+      <div class="deactive">The company does not exist on <a href="<?php echo $this->getSiteUrl()?>"><?php echo $this->getSiteUrl()?></a>. You need to add your company to our service <a href="<?php echo $this->getSiteUrl()?>add"><?php echo $this->getSiteUrl()?>add</a></div>
+    <?php  } ?>
+  <?php } ?>
+</div>

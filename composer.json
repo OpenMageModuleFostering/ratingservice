@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/ratingservice",
+    "type": "magento-module",
+    "license": "MITL",
+    "homepage": "",
+    "description": "Connect Magento to one of the biggest search engines for customer services in the world. ",
+    "authors": [
+    {
+        "name": "Mirkovic Group",
+        "email": "nikola.mirkovic.10@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

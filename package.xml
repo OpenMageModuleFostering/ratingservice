@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<package>
+    <name>ratingservice</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>MITL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Connect Magento to one of the biggest search engines for customer services in the world. </summary>
+    <description>Mirkovic Group runs one of the biggest search engines for customer services in the world. Currently in 25+ countries and translated into 9+ languages. Many customers thinks it's hard to find a direct contact link to different companies and therefore they use Us-Customerservices.com and it's sister sites:&#xD;
+&#xD;
+&#xD;
+&#xD;
+Africa &amp; Asia&#xD;
+&#xD;
+&lt;a href=&#x201D;http://www.contactcustomerservices.co.za&#x201D;&gt;Contactcustomerservices.co.za&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.customerservices.ng&#x201D;&gt;Customerservices.ng&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.customerservices.ph&#x201D;&gt;Customerservices.ph&lt;/a&gt;&#xD;
+&#xD;
+Americas&#xD;
+&lt;a href=&#x201D;http://www.atencion-al-cliente.com.ar&#x201D;&gt;Atencion-al-cliente.com.ar&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencion-al-cliente.com.ve&#x201D;&gt;Atencion-al-cliente.com.ve&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencion-al-cliente.co&#x201D;&gt;Atencion-al-cliente.co&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencion-a-clientes.mx&#x201D;&gt;Atencion-a-clientes.mx&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencionalcliente.pe&#x201D;&gt;Atencionacliente.pe&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencionalcliente.com.gt&#x201D;&gt;Atencionacliente.com.gt&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.canadacustomerservices.com&#x201D;&gt;Canadacustomerservices.com&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.us-customerservices.com&#x201D;&gt;Us-Customerservices.com&lt;/a&gt;&#xD;
+&#xD;
+Europe&#xD;
+&#xD;
+&lt;a href=&#x201D;http://www.asiakaspalvelut.com&#x201D;&gt;Asiakaspalvelut.com&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.atencion-al-cliente.es&#x201D;&gt;Atencion-al-cliente.es&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.contactklantenservice.nl&#x201D;&gt;Contactklantenservice.nl&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.kundtjanster.com&#x201D;&gt;Kundtjanster.com&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.danskkundeservice.dk&#x201D;&gt;Danskkundeservice.dk&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.it-servizioclienti.it/&#x201D;&gt;It-Servizioclienti.it&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.norskkundeservice.com&#x201D;&gt;Norskkundeservice.com&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.kundenserviceliste.at&#x201D;&gt;Kundenserviceliste.at&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.kundenserviceliste.ch&#x201D;&gt;Kundenserviceliste.ch&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.kundenserviceliste.de&#x201D;&gt;Kundenserviceliste.de&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.uk-customerservice.co.uk&#x201D;&gt;Uk-Customerservice.co.uk&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.ringcustomerservices.com&#x201D;&gt;Ringcustomerservices.com&lt;/a&gt;&#xD;
+&#xD;
+Oceania&#xD;
+&#xD;
+&lt;a href=&#x201D;http://www.au-customerservices.com&#x201D;&gt;Au-Customerservices.com&lt;/a&gt;&#xD;
+&lt;a href=&#x201D;http://www.customerservices.nz&#x201D;&gt;Customerservices.nz&lt;/a&gt;&#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+-The Customer service rating extension is FREE and it fully integrates your shop to our customer service search engine in your country.&#xD;
+&#xD;
+-If your store is in several countries you have the possibility to connect to one country per store view.&#xD;
+&#xD;
+-Show the reviews of your customer service in the style of your store which will bring trust to your store. Your customers can easy send feedback after they have contacted your customer service.&#xD;
+&#xD;
+-With Customer service rating extension you can also take advantage of rich snippets in Google where you can show your overall rating from a trusted source.&#xD;
+</description>
+    <notes>First release</notes>
+    <authors><author><name>Mirkovic Group</name><user>mirkovicgroup</user><email>nikola.mirkovic.10@gmail.com</email></author></authors>
+    <date>2016-07-15</date>
+    <time>11:23:15</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Mgroup_RatingService.xml" hash="9eb75a387c6ed07aec5cdada7f47f785"/></dir></target><target name="magelocal"><dir name="Mgroup"><dir name="RatingService"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><file name="Notice.php" hash="29b78374bae20d14c9ae7ed187f8d839"/><file name="Siteconnect.php" hash="91049cd7565b4f93d8870dbbb8f5730f"/></dir><file name=".DS_Store" hash="45c6c06909e5e94c4c3c6df8de67c350"/></dir><file name=".DS_Store" hash="47096c9dd9205368faffbd721f52e16c"/></dir><file name=".DS_Store" hash="734f40961e6c1fef883531f22ac59a92"/></dir><dir name="Helper"><file name="Data.php" hash="760fbfa30978fffe4d9fc476a38ccd59"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Siteconnect"><file name="Collection.php" hash="bf91c7c5c0b77cc4f23201d7ee1c9a80"/></dir><file name="Siteconnect.php" hash="8ee30e3f14620b53c51ab563c6166b10"/></dir><file name="Observer.php" hash="538c29e66f3a147c0e0182faf30b8d4f"/><file name="Parser.php" hash="87557058d815e8768abce31d3647a6a0"/><file name="Siteconnect.php" hash="9f454309b66efaf6654c39c385aae5b1"/></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Ratingservice"><file name="SitelistController.php" hash="37a7f69e836b0aaee7d803a76dbafdb5"/></dir></dir><file name="SendController.php" hash="21f017e61e9799b24e1a6e99a59027ab"/></dir><dir name="etc"><file name="adminhtml.xml" hash="456c61a7f078623144ce5b3719b5e5f0"/><file name="config.xml" hash="083ac660c484e99dec6698577a56954a"/><file name="system.xml" hash="6377576ea4da246e2e0290b3d913be95"/></dir><dir name="sql"><dir name="ratingservice_setup"><file name="install-0.1.0.php" hash="06f017cfbfa9b4d81791ac0c8e800692"/></dir></dir><file name=".DS_Store" hash="1d60dc65ccf7f43c5d4399d4c6ce46f6"/></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="js"><dir name="jRating"><file name="jRating.jquery.js" hash="d39b60e729a51249be7a749b48950021"/><file name="jRating.js" hash="6ee21896da0b6bb06345db3e265ee114"/><file name="jquery.min.js" hash="604c90aca5c5c0941538bb423b3d06c3"/><file name="noconflict.js" hash="8dd633a4b123d345a666b655d88d0b17"/></dir></dir><dir name="css"><dir name="jRating"><file name="bg_jRatingInfos.png" hash="ab6ba377f1d05c2d53989e6e60b11150"/><file name="jRating.jquery.css" hash="81d25ac0d1ed577bb8eee98fe1cee3a3"/><file name="loading.gif" hash="4f7fa57d4170fc48d4feecae5bc2d283"/></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="ratingservice"><file name="form.phtml" hash="2b2e2b8857e61d355f74102c487a0c3f"/></dir></dir><dir name="layout"><file name="ratingservice.xml" hash="7727bfc28746c4d2b277bc9fd28bf889"/></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="ratingservice"><dir name="system"><dir name="config"><file name="notice.phtml" hash="98656bcfa286ad168afd6f783e757f89"/><file name="siteconnect.phtml" hash="9f55c6c5a6c7c6954e51d92a95a92590"/></dir></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

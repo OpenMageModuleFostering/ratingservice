@@ -1,0 +1,47 @@
+<?php
+
+$company_id = Mage::getStoreConfig('rating_service/general/company_id', Mage::app()->getStore());
+$companyData = Mage::helper("ratingservice")->getCompanyData($company_id);
+
+?>
+<?php if($companyData["company_exist"] == 1 && Mage::getStoreConfig('rating_service/general/enable', Mage::app()->getStore())==1):?>
+<?php
+$html = Mage::getModel("ratingservice/parser")->file_get_html($html = Mage::helper("ratingservice")->getSiteUrl()."/".$company_id);
+$reviewForm = $html->find('div[id=review]',0);
+$inputField = $reviewForm->find('div[class=input]');
+
+?>
+<form action="<?php echo $this->getFormAction(); ?>" id="ReviewCompanyViewForm" method="post">
+   <div class="fieldset">
+      <h2 class="legend"><?php echo $reviewForm->find('b',0)->plaintext ?></h2>
+      <ul class="form-list">
+         <li><div id="the_rating" data-average="0" data-id="<?php echo $companyData["company_id"]?>"></div></li>
+         <p id="validate_rate" style="color:red;"></p>
+         <?php foreach ($inputField as $value):?>
+         <?php $value->find("input", 0)->class .= " input-text"; ?>
+         <li>
+            <div class="input-box">
+               <?php echo $value->outertext;?>
+            </div>
+         </li>
+         <?php endforeach;?>
+           <p id="success_rate" style="color:#4292D6;"></p>
+           <li>
+             <button type="button" title="Submit" id="rating_submit" class="button"><span><span><?php echo $reviewForm->find('button[id=submit-review]',0)->plaintext; ?></span></span></button>
+             &nbsp <img class="no-display" id="loading_rating" src="<?php echo $this->getSkinUrl('css/jRating/loading.gif') ?>" width="20px" height="20px">
+           </li>
+           <li><?php echo $html->find('div[class=our-rating]',0)->find('h3',0)->outertext;?></li>
+           <li><div class="basic" data-average="<?php echo $companyData["company_rating"]?>" data-id="<?php echo $companyData["company_id"]?>"></li>
+           <li><?php echo $this->__("Rating: %.1f Total: %d votes",$companyData["company_rating"],$companyData["company_votes"])?></li>
+
+      </ul>
+   </div>
+   <input type="hidden" name="data[Review][ip]" placeholder="" class="input field primary" value="<?php echo Mage::helper('core/http')->getRemoteAddr();?>" id="ReviewIp">
+   <input type="hidden" name="data[Review][rating]" class="input field primary" id="ReviewRating">
+   <input type="hidden" name="data[Review][company_id]" class="input field primary" value="<?php echo $companyData["company_id"]?>" id="ReviewCompanyId">
+   <input type="hidden" name="data[Review][rated]" class="input field primary" value="no" id="ReviewRated"/>
+   <input type="hidden" class="input field primary" value="<?php echo Mage::getUrl('ratingservice/send/index/');?>" id="rating_url"/>
+
+</form>
+<p></p>
+<?php endif;?>
